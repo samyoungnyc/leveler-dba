@@ -1,0 +1,122 @@
+<!doctype html>
+<!--
+  Copyright 2016 Google Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      https://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Demonstrates the use of Google Cloud Database with a Firebase DB">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Firebase Database Quickstart">
+  <meta name="theme-color" content="#303F9F">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Firebase Database Quickstart">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+
+  <!-- Tile icon for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <meta name="msapplication-navbutton-color" content="#303F9F">
+
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+  <link rel="stylesheet" href="main.css">
+ 
+</head>
+<body onload="getValues()">
+
+	<div id="page-wrap">
+		<nav class="nav-bar">
+			<ul>
+          <li><a href="/index.html">Home</a></li>
+					<li><a href="/database.html">Database</a></li>
+					<li><a href="/distribute.html">Distribute</a></li>
+					<li><a href="/info.html">Information</a></li>
+					<li><a href="/receive.html">Receive</a></li>
+			</ul>
+    </nav>
+    <div>
+        <p id="text-wrap">
+						If you are a salaried human or don’t feel like you’re at risk of losing your job this week or next, this site was made to make it easy for you to distribute a small portion of your wealth to our friends in the gig economy while we all make it through this extremely weird moment.
+
+
+						This process will take a few minutes and is best done on your phone.
+						
+						
+						Here’s how it works:
+						
+						
+						By clicking the button below, you will be assigned a “Group Number”
+						You will then be directed to the database.
+						Look for your group number in the database and distribute to that group only via their payment links.
+						Please distribute evenly across that group. In other words, if you have decided you want to distribute 50 dollars, send each of your 10 assigned people $5.00
+						The database will cycle through, indefinitely. Distribute once, distribute weekly, distribute however much you want, but whenever you click the button, you will be assigned a list based on where the list is in the cycle.
+						
+						Click here to find your group.
+						
+						
+						It should go without saying, this only works with a critical mass. Consider sharing this site >
+				</p>
+				<input value="Who Should I Donate To?" type="button" onclick="testIt()">
+    </div>
+	</div>
+
+	<script src="/__/firebase/7.10.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.10.0/firebase-database.js"></script>
+  <script src="/__/firebase/init.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/counter.js"></script>
+  <style>
+    #page-wrap {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      padding-top: 0;
+      margin: 0;
+      background-color: red;
+    }
+    .nav-bar ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
+    .nav-bar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    #text-wrap {
+      padding: 30px;
+      line-height: 3rem;
+      font-size: 1.2rem;
+    }
+    
+    .full-s {
+      width: 100vw;
+      height: 100vh;
+    }
+    </style>
+</body>
+</html>
