@@ -24,11 +24,10 @@ async function getValues() {
 function setGroupCount() {
   if (window.lastCount === window.maxCount) {
     window.nextGroup = 1;
-    alert(`group is ${window.nextGroup}`);
   } else {
     window.nextGroup = window.lastCount + 1;
-    alert(`group is ${window.nextGroup}`);
   }
+    alert(`The group that you should donate to is ${window.nextGroup}`);
   updateLastCountDb();
 }
 
